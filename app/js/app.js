@@ -2,21 +2,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // slider
 
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-      });
-      $('.slider-nav').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-      });
+    $('.single-item').slick({
+      nextArrow: document.querySelector('#my-arrow-next'),
+      prevArrow: document.querySelector('#my-arrow-prev') 
+    });
+
+    $('.multiple-items').slick({
+      infinite: true,
+      slidesToShow: 6,
+      slidesToScroll: 2,
+      autoplay: true,
+      arrows: true,
+      nextArrow: document.querySelector('#my-arrow-next-two'),
+      prevArrow: document.querySelector('#my-arrow-prev-two') 
+    });
 
     // popup
 
