@@ -11,10 +11,40 @@ document.addEventListener("DOMContentLoaded", function() {
       infinite: true,
       slidesToShow: 6,
       slidesToScroll: 2,
-      autoplay: true,
+      // autoplay: true,
       arrows: true,
       nextArrow: document.querySelector('#my-arrow-next-two'),
-      prevArrow: document.querySelector('#my-arrow-prev-two') 
+      prevArrow: document.querySelector('#my-arrow-prev-two'),
+      responsive:[  
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 8
+          }
+    
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 6
+          }
+    
+        },
+        {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 5
+        }
+    
+        },
+        {
+          breakpoint: 482,
+          settings: {
+            slidesToShow: 3
+          }
+    
+        }
+      ] 
     });
 
     // popup
